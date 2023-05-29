@@ -9,11 +9,11 @@
 {% else %}
     {% if config.hideDataOnStandby and printer_status.state.text == 'Operational' %}
         <div class="container">
-            <div class="row">
-                <div class="column xsmall align-left">
+            <div class="MMM-octoprint-row">
+                <div class="MMM-octoprint-column xsmall align-left">
                     {{ "STATUS" | translate | safe }}
                 </div>
-                <div class="column xsmall align-left">
+                <div class="MMM-octoprint-column xsmall align-left">
                     {{ printer_status.state.text | capitalize }}
                 </div>
             </div>
@@ -21,31 +21,31 @@
     {% else %}
         <div class="container">
             {% if config.showThumbnail %}
-                <div class="row-center">
-                    <img class="thumb" width="{{ config.thumbnailSize }}" src="{{ thumbnail }}"/>
+                <div class="MMM-octoprint-row-center">
+                    <img class="MMM-octoprint-thumb" width="{{ config.thumbnailSize }}" src="{{ thumbnail }}"/>
                 </div>
             {% endif %}
-            <div class="row">
-                <div class="column xsmall align-left">
+            <div class="MMM-octoprint-row">
+                <div class="MMM-octoprint-column xsmall align-left">
                     {{ "STATUS" | translate | safe }}
                 </div>
-                <div class="column xsmall align-left">
+                <div class="MMM-octoprint-column xsmall align-left">
                     {{ printer_status.state.text | capitalize }}
                 </div>
             </div>
-            <div class="row">
-                <div class="column xsmall align-left">
+            <div class="MMM-octoprint-row">
+                <div class="MMM-octoprint-column xsmall align-left">
                     {{ "FILENAME" | translate | safe }}
                 </div>
-                <div class="column-text xsmall align-left">
+                <div class="MMM-octoprint-column-text xsmall align-left">
                     {{ job_status.job.file.name if job_status.job.file.name else '-' }}
                 </div>
             </div>
-            <div class="row">
-                <div class="column xsmall align-left">
+            <div class="MMM-octoprint-row">
+                <div class="MMM-octoprint-column xsmall align-left">
                     {{ "PROGRESS" | translate | safe }}
                 </div>
-                <div class="column-text xsmall align-left">
+                <div class="MMM-octoprint-column-text xsmall align-left">
                     {% if job_status.progress.completion > 0 %}
                         {{ (job_status.progress.completion) | round | int }}%
                     {% else %}
@@ -54,11 +54,11 @@
                 </div>
             </div>
             {% if config.showLayerProgress %}
-                <div class="row">
-                    <div class="column xsmall align-left">
+                <div class="MMM-octoprint-row">
+                    <div class="MMM-octoprint-column xsmall align-left">
                         {{ "LAYER" | translate | safe }}
                     </div>
-                    <div class="column-text xsmall align-left">
+                    <div class="MMM-octoprint-column-text xsmall align-left">
                         {% if layer_information.layer.total %}
                             {{ layer_information.layer.current }} / {{ layer_information.layer.total }}
                         {% else %}
@@ -67,27 +67,27 @@
                     </div>
                 </div>
             {% endif %}
-            <div class="row">
-                <div class="column xsmall align-left">
+            <div class="MMM-octoprint-row">
+                <div class="MMM-octoprint-column xsmall align-left">
                     {{ "ETA" | translate | safe }}
                 </div>
-                <div class="column-text xsmall align-left">
+                <div class="MMM-octoprint-column-text xsmall align-left">
                     {{ eta if eta else '-' }}
                 </div>
             </div>
-            <div class="row">
-                <div class="column xsmall align-left">
+            <div class="MMM-octoprint-row">
+                <div class="MMM-octoprint-column xsmall align-left">
                     {{ "EXTRUDER" | translate | safe }}
                 </div>
-                <div class="column-text xsmall align-left">
+                <div class="MMM-octoprint-column-text xsmall align-left">
                     {{ printer_status.temperature.tool0.actual }}°C / {{ printer_status.temperature.tool0.target }}°C
                 </div>
             </div>
-            <div class="row">
-                <div class="column xsmall align-left">
+            <div class="MMM-octoprint-row">
+                <div class="MMM-octoprint-column xsmall align-left">
                     {{ "BED" | translate | safe }}
                 </div>
-                <div class="column-text xsmall align-left">
+                <div class="MMM-octoprint-column-text xsmall align-left">
                     {{ printer_status.temperature.bed.actual }}°C / {{ printer_status.temperature.bed.target }}°C
                 </div>
             </div>
