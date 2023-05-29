@@ -1,0 +1,9 @@
+{
+  "STATUS": "Status",
+  "FILENAME": "Filename",
+  "PROGRESS": "Progress",
+  "EXTRUDER": "Extruder",
+  "BED": "Bed",
+  "LAYER": "Layer",
+  "OCTOPRINT NOT AVAILABLE": "Octoprint not available. Printer offline?"
+}

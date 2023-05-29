@@ -1,0 +1,36 @@
+{
+  "name": "MMM-octoprint",
+  "version": "1.0.0",
+  "description": "A octoprint plugin for MagicMirror².",
+  "main": "MMM-octoprint.js",
+  "author": "Ben Konsemüller",
+  "license": "MIT",
+  "repository": {
+		"type": "git",
+		"url": "git+https://github.com/btastic/MMM-octoprint"
+	},
+  "keywords": [
+		"magic mirror",
+		"smart mirror",
+		"octoprint",
+    "klipper",
+    "mainsail",
+    "fluidd",
+		"module"
+	],
+	"contributors": "https://github.com/btastic/MMM-octoprint/graphs/contributors",
+  "bugs": {
+		"url": "https://github.com/btastic/MMM-octoprint/issues"
+	},
+	"homepage": "https://github.com/btastic/MMM-octoprint#readme",
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-eslint": "latest",
+    "grunt-jsonlint": "latest",
+    "grunt-markdownlint": "^1.0.13",
+    "grunt-stylelint": "latest",
+    "grunt-yamllint": "latest",
+    "stylelint-config-standard": "latest",
+    "time-grunt": "latest"
+  }
+}
