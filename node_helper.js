@@ -30,8 +30,17 @@ module.exports = NodeHelper.create({
 
     const printer_status = await this.fetchPrinterStatus();
     const job_status = await this.fetchPrinterJob();
-    const layer_information = await this.fetchLayerInformation();
-    const thumbnail = await this.fetchThumbnail(job_status);
+
+    let thumbnail = null;
+    let layer_information = null;
+
+    if (this.config.showThumbnail) {
+      thumbnail = await this.fetchThumbnail(job_status);
+    }
+
+    if (this.config.showLayerProgress) {
+      layer_information = await this.fetchLayerInformation();
+    }
 
     const eta = moment.utc(1000 * (job_status.progress.printTimeLeft)).format('HH[h] mm[m] ss[s]');
 
@@ -101,7 +110,11 @@ module.exports = NodeHelper.create({
       const response = await fetch(endpoint, { headers: this.getHeaders() });
       const json = await response.json();
 
-      json.thumbnail = this.config.endpoint + "/" + json.thumbnail;
+      if (!json.thumbnail) {
+        json.thumbnail = "./modules/MMM-octoprint/img/no_thumbnail.png";
+      } else {
+        json.thumbnail = this.config.endpoint + "/" + json.thumbnail;
+      }
 
       return json.thumbnail;
     } catch (error) {
