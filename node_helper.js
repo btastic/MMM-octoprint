@@ -114,7 +114,7 @@ module.exports = NodeHelper.create({
 
   getHeaders() {
     return {
-			"Authorization": `Bearer ${this.config.apiKey}`
-		};
+      "Authorization": `Bearer ${this.config.apiKey}`
+    };
   },
 });
