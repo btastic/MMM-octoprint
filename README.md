@@ -30,8 +30,10 @@ var config = {
             module: 'MMM-octoprint',
             config: {
                 endpoint: "",
+                apiKey: "",
                 updateInterval: 60000,
-                showThumbnail: true,
+                showThumbnail: false,
+                showLayerProgress: false,
                 thumbnailSize: 150,
                 hideDataOnStandby: true
             }
@@ -40,8 +42,11 @@ var config = {
 }
 ```
 
-## Display layer progress
+## Layer progress
 To display the layer progress you have to install the [DisplayLayerProgress](https://plugins.octoprint.org/plugins/DisplayLayerProgress/) plugin. Please follow the [instructions](https://github.com/OllisGit/OctoPrint-DisplayLayerProgress/wiki/How-does-the-plugin-works) to set up your slicer accordingly or use the automatic detection of `;LAYER:<num>` during gcode upload.
+
+## Thumbnails
+To display a thumbnail you have to install the [Slicer Thumbnails](https://plugins.octoprint.org/plugins/prusaslicerthumbnails/) plugin.
 
 ## Configuration options
 
@@ -50,7 +55,8 @@ To display the layer progress you have to install the [DisplayLayerProgress](htt
 | `endpoint`           | *Required* <br>Endpoint of the Octoprint API. For example: http://192.168.0.75<br><br>**Type:** `string`(url) 
 | `apiKey`           | *Required* <br>API Key for Authorization. To create an application key, follow the instructions on [Octoprint docs](https://docs.octoprint.org/en/master/bundledplugins/appkeys.html)<br><br>**Type:** `string` 
 | `updateInterval`     | *Optional* <br>The time interval between UI updates.<br><br>**Type:** `int`(milliseconds)<br>**Default:** 60000 milliseconds (60 seconds)
-| `showThumbnail`      | *Optional* <br>Shows a thumbnail embedded in your gcode files. Uses the [Slicer Thumbnails](https://plugins.octoprint.org/plugins/prusaslicerthumbnails/) plugin.<br><br>**Type:** `bool` <br>**Default:** false
+| `showThumbnail`      | *Optional* <br>Shows a thumbnail embedded in your gcode files.<br><br>**Type:** `bool` <br>**Default:** false
+| `showLayerProgress`  | *Optional* <br>Shows the layer progress.<br><br>**Type:** `bool` <br>**Default:** false
 | `thumbnailSize`      | *Optional* <br>Changes with thumbnails size (width). Enter a integer value for an absolute value, or a relative size with % (e.g. "50%").<br><br>**Type:** `int\|string` <br>**Default:** 150
 | `hideDataOnStandby`  | *Optional* <br>Hides printer info when the printer is operational.<br><br>**Type:** `bool` <br>**Default:** true
 

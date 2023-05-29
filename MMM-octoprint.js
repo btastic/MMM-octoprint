@@ -12,7 +12,8 @@ Module.register("MMM-octoprint", {
     endpoint: "",
     apiKey: "",
     updateInterval: 60000,
-    showThumbnail: true,
+    showThumbnail: false,
+    showLayerProgress: false,
     thumbnailSize: 150,
     hideDataOnStandby: true
   },
