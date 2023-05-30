@@ -49,6 +49,17 @@ To display the layer progress you have to install the [DisplayLayerProgress](htt
 ## Thumbnails
 To display a thumbnail you have to install the [Slicer Thumbnails](https://plugins.octoprint.org/plugins/prusaslicerthumbnails/) plugin.
 
+## Customization
+To change the color of the progress bar, you can override the default colors (green on gray) with css in your custom.css file.
+
+For example:
+```css
+.MMM-octoprint {
+  --progress-color: crimson;
+  --progress-background-color: gray;
+}
+```
+
 ## Configuration options
 
 | Option               | Description
