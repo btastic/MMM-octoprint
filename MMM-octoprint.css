@@ -42,6 +42,7 @@
 .MMM-octoprint {
     --progress-color: green;
     --progress-background-color: gray;
+    --border-radius: 10px;
 }
 
 .MMM-octoprint .container {
@@ -53,23 +54,23 @@
 /* background: */
 .MMM-octoprint progress::-webkit-progress-bar {
     background-color: var(--progress-background-color);
-    border-radius: 10px;
+    border-radius: var(--border-radius);
 }
 
 .MMM-octoprint progress {
     background-color: var(--progress-background-color);
-    border-radius: 10px;
+    border-radius: var(--border-radius);
 }
 
 /* value: */
 .MMM-octoprint progress::-webkit-progress-value {
     background-color: var(--progress-color) !important;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
 }
 
 .MMM-octoprint progress::-moz-progress-bar {
     background-color: var(--progress-color) !important;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
 }
 
 .MMM-octoprint progress {
