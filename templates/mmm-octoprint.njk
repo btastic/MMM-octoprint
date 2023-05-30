@@ -47,7 +47,8 @@
                 </div>
                 <div class="column-text xsmall align-left">
                     {% if job_status.progress.completion > 0 %}
-                        <progress id="print_progress" max="100" value="{{ (job_status.progress.completion) | round | int }}"></progress><span>{{ (job_status.progress.completion) | round | int }}%</span>
+                        <progress max="100" value="{{ (job_status.progress.completion) | round | int }}"></progress>
+                        <span>{{ (job_status.progress.completion) | round | int }}%</span>
                     {% else %}
                         -
                     {% endif %}
