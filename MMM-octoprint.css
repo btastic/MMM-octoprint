@@ -38,6 +38,40 @@
     overflow: hidden;
     white-space: nowrap;
 }
-.MMM-octoprint #print_progress {
-     background: crimson;
+
+.MMM-octoprint {
+    --progress-color: green;
+    --progress-background-color: gray;
+}
+
+.MMM-octoprint .container {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* background: */
+.MMM-octoprint progress::-webkit-progress-bar {
+    background-color: var(--progress-background-color);
+    border-radius: 10px;
+}
+
+.MMM-octoprint progress {
+    background-color: var(--progress-background-color);
+    border-radius: 10px;
+}
+
+/* value: */
+.MMM-octoprint progress::-webkit-progress-value {
+    background-color: var(--progress-color) !important;
+    border-radius: 10px;
+}
+
+.MMM-octoprint progress::-moz-progress-bar {
+    background-color: var(--progress-color) !important;
+    border-radius: 10px;
+}
+
+.MMM-octoprint progress {
+    color: var(--progress-color);
 }
