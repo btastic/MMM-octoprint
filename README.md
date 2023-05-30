@@ -52,11 +52,14 @@ To display a thumbnail you have to install the [Slicer Thumbnails](https://plugi
 ## Customization
 To change the color of the progress bar, you can override the default colors (green on gray) with css in your custom.css file.
 
+You can also change the border radius of the progress bar, if you don't like rounded corners.
+
 For example:
 ```css
 .MMM-octoprint {
   --progress-color: crimson;
   --progress-background-color: gray;
+  --border-radius: 0px;
 }
 ```
 
