@@ -8,13 +8,13 @@
  * Custom here your css module
  *
  */
-.MMM-octoprint-row {
+.MMM-octoprint .row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.MMM-octoprint-row-center {
+.MMM-octoprint .row-center {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -22,19 +22,22 @@
     justify-content: center;
 }
 
-.MMM-octoprint-thumb {
+.MMM-octoprint .thumb {
     margin-bottom: 5px;
 }
 
-.MMM-octoprint-column {
+.MMM-octoprint .column {
     min-width: 0;
     flex-basis: 40%;
 }
 
-.MMM-octoprint-column-text {
+.MMM-octoprint .column-text {
     min-width: 0;
     flex-basis: 60%;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+}
+.MMM-octoprint #print_progress {
+     background: crimson;
 }
