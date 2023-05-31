@@ -31,11 +31,17 @@
     flex-basis: 40%;
 }
 
-.MMM-octoprint .column-text {
+.MMM-octoprint .column-text-of {
     min-width: 0;
     flex-basis: 60%;
     text-overflow: ellipsis;
     overflow: hidden;
+    white-space: nowrap;
+}
+
+.MMM-octoprint .column-text {
+    min-width: 0;
+    flex-basis: 60%;
     white-space: nowrap;
 }
 
