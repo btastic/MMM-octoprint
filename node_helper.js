@@ -29,6 +29,11 @@ module.exports = NodeHelper.create({
     const self = this;
 
     const printer_status = await this.fetchPrinterStatus();
+
+    if (!printer_status) {
+      return;
+    }
+
     const job_status = await this.fetchPrinterJob();
 
     let thumbnail = null;
