@@ -23,9 +23,6 @@
 		"url": "https://github.com/btastic/MMM-octoprint/issues"
 	},
 	"homepage": "https://github.com/btastic/MMM-octoprint#readme",
-  "dependencies": {
-    "node-fetch": "latest"
-  },
   "devDependencies": {
     "grunt": "latest",
     "grunt-eslint": "latest",
