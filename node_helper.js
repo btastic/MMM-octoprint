@@ -89,16 +89,23 @@ module.exports = NodeHelper.create({
 
   async fetchLayerInformation() {
     const endpoint = this.config.endpoint + "/plugin/DisplayLayerProgress/values";
-
+  
     try {
       const response = await fetch(endpoint, { headers: this.getHeaders() });
-      const json = await response.json();
-
-      return json;
+      const text = await response.text();
+  
+      // Überprüfen, ob die Antwort gültiges JSON ist
+      if (response.headers.get("content-type").includes("application/json")) {
+        const json = JSON.parse(text);
+        return json;
+      } else {
+        Log.error(`${this.name} received an error: Couldn't fetch layer information. Maybe the DisplayLayerProgress plugin is not installed or activated?`);
+        return null;
+      }
     } catch (error) {
       Log.error(`${this.name} received an error: ${error}`);
       this.sendSocketNotification("HTTP_ERROR", {});
-
+  
       return null;
     }
   },
