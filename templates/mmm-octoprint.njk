@@ -60,7 +60,7 @@
                         {{ "LAYER" | translate | safe }}
                     </div>
                     <div class="column-text xsmall align-left">
-                        {% if layer_information?.layer.total %}
+                        {% if layer_information.layer.total %}
                             {{ layer_information.layer.current }} / {{ layer_information.layer.total }}
                         {% else %}
                             -
